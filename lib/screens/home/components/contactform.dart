@@ -110,7 +110,7 @@ class _ContactFormState extends State<ContactForm> {
                 )
               ],
               validator: (value) {
-                if (value != null && !value.isValidName) {
+                if ((value != null && !value.isValidName) || (value != null && value.toString().length < 3)) {
                   return "Enter valid name";
                 }
                 return null;
@@ -285,7 +285,7 @@ extension ExtString on String {
 
   bool get isValidName {
     final nameRegExp =
-        RegExp(r"^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$");
+        RegExp(r"^[A-Za-z]+((\s)?((\'|\-|\.)?([A-Za-z])+))*$");
     return nameRegExp.hasMatch(this);
   }
 
