@@ -39,4 +39,10 @@ final List<Project> projectList = [
           " add dynamic and engaging text effects to the user interface.",
       link: "https://github.com/pshanmukha/chat_gpt"
   ),
+  Project(
+      name: "Task-Manager",
+      description: "This is a task manager app built using Flutter, Node.js, Express, "
+          "and MongoDB. The app allows users to create, manage and track their daily tasks efficiently.",
+      link: "https://github.com/pshanmukha/Task-Manager"
+  ),
 ];
