@@ -37,9 +37,9 @@ class SideMenu extends StatelessWidget {
                         title: "City",
                         text: "Ongole",
                       ),
-                      const AreaInfoText(
+                       AreaInfoText(
                         title: "Age",
-                        text: "22",
+                        text: calculateAge(DateTime(2000, 12, 3)),
                       ),
                       const Skills(),
                       const SizedBox(
@@ -59,7 +59,7 @@ class SideMenu extends StatelessWidget {
                               Text(
                                 "Download CV",
                                 style: TextStyle(
-                                  color: Theme.of(context).textTheme.bodyText1!.color,
+                                  color: Theme.of(context).textTheme.bodyLarge!.color,
                                 ),
                               ),
                               const SizedBox(
