@@ -35,4 +35,4 @@ const labelTextStyle = TextStyle(
 const String linkedIn = "https://linkedin.com/in/shanmukha-panyam-830b641a3";
 const String github = "https://github.com/pshanmukha";
 const String twitter = "https://twitter.com/urstruelyshannu";
-const String resume = "https://drive.google.com/uc?export=download&id=18mlQJfszm_W0rqcCTT1cNHAyv2rRt8Uv"; //in drive
+const String resume = "https://drive.google.com/uc?export=download&id=1aPNQlh7chOMe32fyGE94esTN5OXY08oK"; //in drive
