@@ -22,7 +22,7 @@ final List<Experience> experienceList = [
     companyName: "Dimiour",
     designation: "Flutter Developer",
     shift: "Full-time",
-    timeLine: "Jun 2021 - Present | 1 yr 7 mos",
+    timeLine: "Jun 2021 - Present | 2 yr 1 mon",
     location: "Bengaluru, Karnataka, India",
     companyLogo:
         "https://media-exp1.licdn.com/dms/image/C4D0BAQHQV5iPEdYhEA/company-logo_200_200/0/1657034303881?e=1678924800&v=beta&t=OdWFu8_Bncjw-mqIT8CmeBHtiZzxmDk0cVNX-vKB2N4",
@@ -32,7 +32,7 @@ final List<Experience> experienceList = [
     companyName: "Dimiour",
     designation: "Software Intern",
     shift: "Internship",
-    timeLine: "Mar 2021 - Jun 2021 | 3 mos",
+    timeLine: "Mar 2021 - Jun 2021 | 3 mon",
     location: "Bengaluru, Karnataka, India",
     companyLogo:
         "https://media-exp1.licdn.com/dms/image/C4D0BAQHQV5iPEdYhEA/company-logo_200_200/0/1657034303881?e=1678924800&v=beta&t=OdWFu8_Bncjw-mqIT8CmeBHtiZzxmDk0cVNX-vKB2N4",
