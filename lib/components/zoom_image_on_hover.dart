@@ -62,14 +62,19 @@ class _HoverImageState extends State<HoverImage>
           width: 220.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(100.0),
+            image: const DecorationImage(
+              image: AssetImage("assets/images/mypic.jpg"),
+              fit: BoxFit.cover,
+            )
           ),
           clipBehavior: Clip.hardEdge,
           transform: Matrix4(_animation.value, 0, 0, 0, 0, _animation.value, 0,
               0, 0, 0, 1, 0, padding.value, padding.value, 0, 1),
-          child: Image.network(
+          //child: AssetImage("assets/images/mypic.jpg"),
+          /*Image.network(
             widget.image,
             fit: BoxFit.cover,
-          ),
+          ),*/
         ),
       ),
     );
