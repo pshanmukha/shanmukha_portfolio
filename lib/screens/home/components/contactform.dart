@@ -56,7 +56,7 @@ class _ContactFormState extends State<ContactForm> {
           children: [
             Text(
               "Contact Me",
-              style: Theme.of(context).textTheme.headline3!.copyWith(
+              style: Theme.of(context).textTheme.displaySmall!.copyWith(
                   fontWeight: FontWeight.bold, color: Colors.white),
             ),
             Padding(
@@ -256,18 +256,20 @@ class _ContactFormState extends State<ContactForm> {
                             children: const [
                               Text(
                                 "Submit",
+                                style: TextStyle(color: submitButtonTextColor),
                               ),
                               SizedBox(
                                 width: defaultPadding / 2,
                               ),
-                              Icon(Icons.check_circle),
+                              Icon(Icons.check_circle, color: submitButtonTextColor,),
                             ],
                           ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    primary: primaryColor,
+                    backgroundColor: primaryColor,
                     minimumSize: const Size(100, 50),
                     elevation: 3,
+                    textStyle: const TextStyle(color: submitButtonTextColor),
                   )),
             )
           ],

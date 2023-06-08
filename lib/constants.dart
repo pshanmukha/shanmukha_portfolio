@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
-const primaryColor = Color(0xFFFFC107);
+const primaryColor = Color(0xFF5EEAD4);
 const secondaryColor = Color(0xFF242430);
 const darkColor = Color(0xFF191923);
 const bodyTextColor = Color(0xFF8B8B8D);
-const bgColor = Color(0xFF1E1E28);
+const bgColor = Color(0xFF0F172A);
 const double opacity = 0.5;
 Color primaryButtonColor = Colors.yellow.shade200;
+const submitButtonTextColor = Color(0xFF134E4A);
+const titleTextColor = Color(0xFFE2E8F0);
+const tileBgColor = Color(0xFF94A3B8);
 
 const defaultPadding = 20.0;
 const defaultDuration = Duration(seconds: 1);

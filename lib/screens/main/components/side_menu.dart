@@ -9,13 +9,19 @@ import 'package:shanmukha_portfolio/screens/main/components/skills.dart';
 import 'package:shanmukha_portfolio/utility/custom_scrollbar_with_singlechildscrollview.dart';
 import 'package:shanmukha_portfolio/utility/utility_methods.dart';
 
-class SideMenu extends StatelessWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({
     Key? key,
   }) : super(key: key);
 
   @override
+  State<SideMenu> createState() => _SideMenuState();
+}
+
+class _SideMenuState extends State<SideMenu> {
+  @override
   Widget build(BuildContext context) {
+    bool isHover = false;
     return Drawer(
       child: SafeArea(
         child: Column(
@@ -52,43 +58,60 @@ class SideMenu extends StatelessWidget {
                         height: defaultPadding / 2,
                       ),
                       TextButton(
-                        onPressed: () => download(resume),
-                        child: FittedBox(
+                        onPressed: () {
+
+                        },
+                        child: GestureDetector(
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
+                              const Text(
                                 "Download CV",
-                                style: TextStyle(
-                                  color: Theme.of(context).textTheme.bodyLarge!.color,
-                                ),
+                                style: TextStyle(color: primaryColor),
                               ),
                               const SizedBox(
                                 width: defaultPadding / 2,
                               ),
-                              SvgPicture.asset("assets/icons/download.svg")
+                              SvgPicture.asset("assets/icons/download.svg",color: Colors.white,)
                             ],
                           ),
+                          onTap: () => download(resume),
                         ),
                       ),
-                      Container(
-                        margin: const EdgeInsets.only(top: defaultPadding),
-                        color: const Color(0xFF24242E),
-                        child: Row(children: [
-                          const Spacer(),
-                          IconButton(
-                            onPressed: () => openLinkInOtherTab(linkedIn),
-                            icon: SvgPicture.asset("assets/icons/linkedin.svg"),
+                      Material(
+                        elevation: 50,
+                        color: isHover ? tileBgColor : bgColor,
+                        animationDuration: const Duration(seconds: 200),
+                        child: InkWell(
+                          onHover: (val) {
+                            setState(() {
+                              isHover = val;
+                            });
+                          },
+                          onTap: () {},
+                          child: Container(
+                            color: Colors.transparent/*const Color(0xFF24242E)*/,
+                            child: Row(children: [
+                              const Spacer(),
+                              IconButton(
+                                onPressed: () => openLinkInOtherTab(linkedIn),
+                                splashRadius: 20,
+                                icon: SvgPicture.asset("assets/icons/linkedin.svg"),
+                              ),
+                              IconButton(
+                                onPressed: () => openLinkInOtherTab(github),
+                                splashRadius: 20,
+                                icon: SvgPicture.asset("assets/icons/github.svg",),
+                              ),
+                              IconButton(
+                                onPressed: () => openLinkInOtherTab(twitter),
+                                splashRadius: 20,
+                                icon: SvgPicture.asset("assets/icons/twitter.svg"),
+                              ),
+                              const Spacer(),
+                            ]),
                           ),
-                          IconButton(
-                            onPressed: () => openLinkInOtherTab(github),
-                            icon: SvgPicture.asset("assets/icons/github.svg"),
-                          ),
-                          IconButton(
-                            onPressed: () => openLinkInOtherTab(twitter),
-                            icon: SvgPicture.asset("assets/icons/twitter.svg"),
-                          ),
-                          const Spacer(),
-                        ]),
+                        ),
                       )
                     ],
                   ),

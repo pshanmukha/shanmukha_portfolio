@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shanmukha_portfolio/constants.dart';
-import 'package:shanmukha_portfolio/models/certications.dart';
+import 'package:shanmukha_portfolio/models/certifications.dart';
 import 'package:shanmukha_portfolio/responsive.dart';
 import 'package:shanmukha_portfolio/screens/home/components/certification_card.dart';
 
@@ -21,13 +21,13 @@ class MyCertifications extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal:defaultPadding),
           child: Text(
             "My Certifications",
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
         const SizedBox(
           height: defaultPadding,
         ),
-        Responsive(
+        const Responsive(
             mobile: CertificateGridView(crossAxisCount: 1,childAspectRatio: 1.7,),
             mobileLarge: CertificateGridView(
               crossAxisCount: 2,
@@ -55,7 +55,7 @@ class CertificateGridView extends StatelessWidget {
     return GridView.builder(
       controller: ScrollController(),
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: certificateList.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount,

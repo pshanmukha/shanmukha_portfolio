@@ -14,7 +14,7 @@ class HomeBanner extends StatelessWidget {
       aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
       child: Stack(fit: StackFit.expand, children: [
         Image.asset(
-          "assets/images/bg.jpeg",
+          "assets/images/bg.jpg",
           fit: BoxFit.cover,
         ),
         Container(
@@ -29,10 +29,10 @@ class HomeBanner extends StatelessWidget {
               Text(
                 "Welcome to my \nArt Space!",
                 style: Responsive.isDesktop(context)
-                    ? Theme.of(context).textTheme.headline3!.copyWith(
-                        fontWeight: FontWeight.bold, color: Colors.white)
-                    : Theme.of(context).textTheme.headline5!.copyWith(
-                        fontWeight: FontWeight.bold, color: Colors.white),
+                    ? Theme.of(context).textTheme.displaySmall!.copyWith(
+                        fontWeight: FontWeight.bold, color: titleTextColor)
+                    : Theme.of(context).textTheme.headlineSmall!.copyWith(
+                        fontWeight: FontWeight.bold, color: titleTextColor),
               ),
               if (Responsive.isMobileLarge(context))
                 const SizedBox(
@@ -59,7 +59,7 @@ class MyBuildAnimatedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTextStyle(
-      style: Theme.of(context).textTheme.subtitle1!,
+      style: Theme.of(context).textTheme.titleMedium!,
       maxLines: 1,
       child: Row(
         children: [
@@ -108,13 +108,13 @@ class FlutterCodedText extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Text.rich(
       TextSpan(text: "<", children: [
-        const TextSpan(
+        TextSpan(
           text: "flutter",
           style: TextStyle(
             color: primaryColor,
           ),
         ),
-        const TextSpan(text: ">"),
+        TextSpan(text: ">"),
       ]),
     );
   }
