@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 const primaryColor = Color(0xFF5EEAD4);
 const secondaryColor = Color(0xFF242430);
@@ -35,4 +36,6 @@ const labelTextStyle = TextStyle(
 const String linkedIn = "https://linkedin.com/in/shanmukha-panyam-830b641a3";
 const String github = "https://github.com/pshanmukha";
 const String twitter = "https://twitter.com/urstruelyshannu";
-const String resume = "https://drive.google.com/uc?export=download&id=1aPNQlh7chOMe32fyGE94esTN5OXY08oK"; //in drive
+const String resume = "https://drive.google.com/uc?export=download&id=1V5vObdNM7dqWYu3wwazu6wc67-2yAtdA"; //in drive
+
+TextTheme signatureFont = GoogleFonts.zeyadaTextTheme().apply(bodyColor: Colors.white);

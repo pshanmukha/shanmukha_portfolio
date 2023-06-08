@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 
 class HoverImage extends StatefulWidget {
@@ -70,11 +71,6 @@ class _HoverImageState extends State<HoverImage>
           clipBehavior: Clip.hardEdge,
           transform: Matrix4(_animation.value, 0, 0, 0, 0, _animation.value, 0,
               0, 0, 0, 1, 0, padding.value, padding.value, 0, 1),
-          //child: AssetImage("assets/images/mypic.jpg"),
-          /*Image.network(
-            widget.image,
-            fit: BoxFit.cover,
-          ),*/
         ),
       ),
     );

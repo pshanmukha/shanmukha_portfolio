@@ -20,13 +20,13 @@ class Knowledges extends StatelessWidget {
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
-        const KnowledgeText(text: "Flutter",),
-        const KnowledgeText(text: "Git",),
-        const KnowledgeText(text: "Firebase",),
-        const KnowledgeText(text: "AWS",),
-        const KnowledgeText(text: "React (just learning)",),
-        const KnowledgeText(text: "Node JS (just learning)",),
-        const KnowledgeText(text: "Express JS",),
+        const KnowledgeText(text: "Flutter", url: "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",),
+        const KnowledgeText(text: "Git",url: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",),
+        const KnowledgeText(text: "Firebase",url: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",),
+        const KnowledgeText(text: "AWS",url: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",),
+        const KnowledgeText(text: "React JS",url: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",),
+        const KnowledgeText(text: "Node JS",url: "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",),
+        const KnowledgeText(text: "Express JS",url: "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",),
       ],
     );
   }
@@ -36,20 +36,26 @@ class KnowledgeText extends StatelessWidget {
   const KnowledgeText({
     Key? key,
     required this.text,
+    required this.url,
   }) : super(key: key);
 
   final String text;
+  final String url;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Icon(Icons.check, color: primaryColor,),
-        const SizedBox(
-          width: defaultPadding / 2,
-        ),
-        Text(text),
-      ],
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
+      child: Row(
+        children: [
+          SvgPicture.network(url, width: 24,),
+          //const Icon(Icons.check, color: primaryColor,),
+          const SizedBox(
+            width: defaultPadding / 2,
+          ),
+          Text(text),
+        ],
+      ),
     );
   }
 }

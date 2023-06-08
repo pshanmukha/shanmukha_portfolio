@@ -50,7 +50,7 @@ class _ExperienceCardState extends State<ExperienceCard> {
                   children: [
                     Text(
                       widget.recommendation.companyName!,
-                      style: Theme.of(context).textTheme.subtitle2,
+                      style: Theme.of(context).textTheme.titleSmall,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -59,19 +59,19 @@ class _ExperienceCardState extends State<ExperienceCard> {
                       widget.recommendation.shift!,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(height: 1.5),
+                      style: const TextStyle(height: 1.5),
                     ),
                     Text(
                       widget.recommendation.timeLine!,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(height: 1.5),
+                      style: const TextStyle(height: 1.5),
                     ),
                     Text(
                       widget.recommendation.location!,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(height: 1.5),
+                      style: const TextStyle(height: 1.5),
                     ),
                   ],
                 ),

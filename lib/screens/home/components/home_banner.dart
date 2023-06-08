@@ -11,7 +11,7 @@ class HomeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
+      aspectRatio: Responsive.isMobile(context) ? 2.4 : 3,
       child: Stack(fit: StackFit.expand, children: [
         Image.asset(
           "assets/images/bg.jpg",
@@ -44,6 +44,20 @@ class HomeBanner extends StatelessWidget {
               ),
               
             ],
+          ),
+        ),
+        Align(
+          alignment: Alignment.bottomRight,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+            child: Text(
+              "<shanmukha/>",
+              style: Responsive.isDesktop(context)
+                  ? signatureFont.displaySmall!.copyWith(
+                  fontWeight: FontWeight.bold, color: titleTextColor, fontSize: 40.0)
+                  : signatureFont.headlineSmall!.copyWith(
+                  fontWeight: FontWeight.bold, color: titleTextColor, fontSize: 22.0),
+            ),
           ),
         )
       ]),

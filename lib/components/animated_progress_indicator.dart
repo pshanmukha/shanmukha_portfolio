@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shanmukha_portfolio/constants.dart';
 
 class AnimatedCircularProgressIndicator extends StatelessWidget {
   const AnimatedCircularProgressIndicator({
     Key? key,
-    required this.percentage,
     required this.label,
+    required this.url,
+    required this.percentage,
+
   }) : super(key: key);
 
-  final double percentage;
   final String label;
+  final String url;
+  final double percentage;
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +33,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
                         backgroundColor: darkColor,
                       ),
                       Center(
-                        child: Text(
-                          (value * 100).toInt().toString() + "%",
-                          style: Theme.of(context).textTheme.subtitle1,
-                        ),
+                        child: SvgPicture.network(url, width: 32,),
                       )
                     ],
                   )),
@@ -44,7 +45,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
           label,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: Theme.of(context).textTheme.subtitle2,
+          style: Theme.of(context).textTheme.titleSmall,
         )
       ],
     );

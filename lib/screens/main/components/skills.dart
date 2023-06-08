@@ -12,9 +12,9 @@ class Skills extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Divider(),
+        const Divider(),
         Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             vertical: defaultPadding,
           ),
           child: Text(
@@ -23,27 +23,30 @@ class Skills extends StatelessWidget {
           ),
         ),
         Row(
-          children: [
+          children: const [
             Expanded(
                 child: AnimatedCircularProgressIndicator(
-              percentage: 0.8,
               label: "Flutter",
+                  url: "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
+                  percentage: 1.0,
             )),
             SizedBox(
               width: defaultPadding,
             ),
             Expanded(
                 child: AnimatedCircularProgressIndicator(
-              percentage: 0.65,
               label: "Firebase",
+                  url: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+                  percentage: 1.0,
             )),
             SizedBox(
               width: defaultPadding,
             ),
             Expanded(
                 child: AnimatedCircularProgressIndicator(
-              percentage: 0.6,
-              label: "AWS",
+              label: "ReactJS",
+                  url: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
+                  percentage: 1.0,
             )),
           ],
         ),
