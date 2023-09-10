@@ -45,4 +45,12 @@ final List<Project> projectList = [
           "and MongoDB. The app allows users to create, manage and track their daily tasks efficiently.",
       link: "https://github.com/pshanmukha/Task-Manager"
   ),
+  Project(
+      name: "X Clone App(Twitter)",
+      description: "X Clone is an open-source microblogging platform, built with Flutter for " 
+      "seamless cross-platform experience, Appwrite for a backend-as-a-service solution, "
+      "and the Riverpod state management approach. Designed for developers, enthusiasts, "
+      "and anyone aiming to dive deep into the world of social microblogging from a tech perspective.",
+      link: "https://github.com/pshanmukha/twitter_clone"
+  ),
 ];
