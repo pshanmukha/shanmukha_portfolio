@@ -53,4 +53,10 @@ final List<Project> projectList = [
       "and anyone aiming to dive deep into the world of social microblogging from a tech perspective.",
       link: "https://github.com/pshanmukha/twitter_clone"
   ),
+  Project(
+      name: "Simple Analog Clock App",
+      description: "A minimalist analog clock app built with Flutter that displays the local time. "
+      "It also features light and dark themes.",
+      link: "https://github.com/pshanmukha/simple_analog_clock"
+  ),
 ];
