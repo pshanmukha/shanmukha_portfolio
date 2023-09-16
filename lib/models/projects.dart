@@ -56,7 +56,8 @@ final List<Project> projectList = [
   Project(
       name: "Simple Analog Clock App",
       description: "A minimalist analog clock app built with Flutter that displays the local time. "
-      "It also features light and dark themes.",
+      "It also features light and dark themes. Responsive design ensures a seamless experience across "
+      "devices, while the user-friendly interface makes time-checking a delightful experience.",
       link: "https://github.com/pshanmukha/simple_analog_clock"
   ),
 ];
