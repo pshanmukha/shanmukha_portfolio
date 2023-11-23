@@ -21,7 +21,7 @@ class Projects extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal:defaultPadding),
           child: Text(
             "My Projects",
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
         const SizedBox(

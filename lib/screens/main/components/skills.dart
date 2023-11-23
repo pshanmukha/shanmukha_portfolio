@@ -19,11 +19,11 @@ class Skills extends StatelessWidget {
           ),
           child: Text(
             "Skills",
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
-        Row(
-          children: const [
+        const Row(
+          children: [
             Expanded(
                 child: AnimatedCircularProgressIndicator(
               label: "Flutter",

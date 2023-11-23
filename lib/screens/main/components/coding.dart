@@ -20,12 +20,12 @@ class Coding extends StatelessWidget {
             style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
-        Wrap(
+        const Wrap(
           direction: Axis.horizontal,
           alignment: WrapAlignment.start,
           spacing: 8.0,
           runSpacing: 8.0,
-          children: const [
+          children: [
             AnimatedProgressContainer(codeSkill: "Dart",),
             AnimatedProgressContainer(codeSkill: "Python",),
             AnimatedProgressContainer(codeSkill: "HTML",),

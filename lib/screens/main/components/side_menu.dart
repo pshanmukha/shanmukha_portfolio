@@ -31,7 +31,8 @@ class _SideMenuState extends State<SideMenu> {
               child: CustomScrollbarWithSingleChildScrollView(
                 controller: ScrollController(),
                 scrollDirection: Axis.vertical,
-                child: Padding(
+                child: Container(
+                  color: bgColor,
                   padding: const EdgeInsets.all(defaultPadding),
                   child: Column(
                     children: [
@@ -59,7 +60,7 @@ class _SideMenuState extends State<SideMenu> {
                       ),
                       TextButton(
                         onPressed: () {
-
+                                    
                         },
                         child: GestureDetector(
                           child: Row(
@@ -75,7 +76,18 @@ class _SideMenuState extends State<SideMenu> {
                               SvgPicture.asset("assets/icons/download.svg",color: Colors.white,)
                             ],
                           ),
-                          onTap: () => download(resume),
+                          onTap: () {
+                            download(resume);
+                            const snackBar = SnackBar(
+                          content: Text('Resume will download in a few seconds...',textAlign: TextAlign.center,),
+                          backgroundColor: primaryColor,
+                          elevation: 10,
+                          behavior: SnackBarBehavior.floating,
+                          margin: EdgeInsets.all(5),
+                          duration: Duration(seconds: 2),
+                        );
+                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                          } ,
                         ),
                       ),
                       Material(

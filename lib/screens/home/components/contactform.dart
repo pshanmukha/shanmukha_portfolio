@@ -252,8 +252,8 @@ class _ContactFormState extends State<ContactForm> {
                               color: Colors.white,
                             ),
                           )
-                        : Row(
-                            children: const [
+                        : const Row(
+                            children: [
                               Text(
                                 "Submit",
                                 style: TextStyle(color: submitButtonTextColor),

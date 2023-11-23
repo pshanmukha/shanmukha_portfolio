@@ -1,4 +1,5 @@
-import 'package:flutter/gestures.dart';
+// ignore_for_file: unnecessary_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:shanmukha_portfolio/constants.dart';

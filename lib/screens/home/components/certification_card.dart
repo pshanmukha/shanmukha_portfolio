@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shanmukha_portfolio/constants.dart';
 import 'package:shanmukha_portfolio/models/certifications.dart';
 import 'package:shanmukha_portfolio/responsive.dart';
@@ -24,7 +23,9 @@ class _CertificateCardState extends State<CertificateCard> {
     bool isHover = false;
     return Material(
       elevation: 50,
-      color: isHover ? tileBgColor : bgColor,
+      color: isHover 
+      ? tileBgColor 
+      : bgColor,
       animationDuration: const Duration(seconds: 200),
       child: InkWell(
         onHover: (val) {

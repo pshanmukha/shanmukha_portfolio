@@ -1,15 +1,13 @@
-//import 'dart:html';
 import 'dart:convert';
 import 'dart:html' as html;
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
-import 'package:shanmukha_portfolio/constants.dart';
 
 download(url) {
   html.AnchorElement anchorElement = html.AnchorElement(href: url);
   anchorElement.download = "Shanmukha_Resume";
   anchorElement.click();
+  anchorElement.remove();
 }
 
 openLinkInOtherTab(url) {

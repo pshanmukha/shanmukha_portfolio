@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 
 class HoverImage extends StatefulWidget {
   final String image;
 
-  const HoverImage({required this.image});
+  const HoverImage({Key? key, required this.image}) : super(key: key);
 
   @override
   _HoverImageState createState() => _HoverImageState();

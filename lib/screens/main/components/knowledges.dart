@@ -17,7 +17,7 @@ class Knowledges extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             "Knowledge",
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
         const KnowledgeText(text: "Flutter", url: "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",),
