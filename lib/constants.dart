@@ -36,6 +36,6 @@ const labelTextStyle = TextStyle(
 const String linkedIn = "https://linkedin.com/in/shanmukha-panyam-830b641a3";
 const String github = "https://github.com/pshanmukha";
 const String twitter = "https://twitter.com/urstruelyshannu";
-const String resume = "https://drive.google.com/uc?export=download&id=1V5vObdNM7dqWYu3wwazu6wc67-2yAtdA"; //in drive
+const String resume = "https://drive.google.com/uc?export=download&id=1wn94iRvzh5RXfSNoR9KIiq0wpQL2E9uM"; //in drive
 
 TextTheme signatureFont = GoogleFonts.zeyadaTextTheme().apply(bodyColor: Colors.white);
