@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shanmukha_portfolio/components/zoom_image_on_hover.dart';
 import 'package:shanmukha_portfolio/constants.dart';
+import 'package:shanmukha_portfolio/screens/main/components/resume_download.dart';
 
 class MyInfo extends StatelessWidget {
   const MyInfo({
@@ -42,6 +43,8 @@ class MyInfo extends StatelessWidget {
                 height: 1.5,
               ),
             ),
+            const Spacer(),
+            const ResumeDownload(),
             const Spacer(
               flex: 2,
             ),

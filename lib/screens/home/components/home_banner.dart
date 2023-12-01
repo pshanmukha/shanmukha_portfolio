@@ -106,7 +106,7 @@ class AnimatedBannerText extends StatelessWidget {
         repeatForever: true,
         animatedTexts: [
       TyperAnimatedText(
-        "I build Native and Cross-Platform Mobile app",
+        "I build Cross-Platform Mobile apps",
         speed: const Duration(milliseconds: 60),
       ),
     ]);

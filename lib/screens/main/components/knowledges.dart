@@ -21,12 +21,12 @@ class Knowledges extends StatelessWidget {
           ),
         ),
         const KnowledgeText(text: "Flutter", url: "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",),
+        const KnowledgeText(text: "React JS",url: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",),
         const KnowledgeText(text: "Git",url: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",),
         const KnowledgeText(text: "Firebase",url: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",),
         const KnowledgeText(text: "AWS",url: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",),
-        const KnowledgeText(text: "React JS",url: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",),
-        const KnowledgeText(text: "Node JS",url: "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",),
-        const KnowledgeText(text: "Express JS",url: "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",),
+        //const KnowledgeText(text: "Node JS",url: "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",),
+        //const KnowledgeText(text: "Express JS",url: "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",),
       ],
     );
   }
