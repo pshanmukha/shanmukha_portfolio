@@ -42,7 +42,6 @@ class HomeBanner extends StatelessWidget {
               const SizedBox(
                 height: defaultPadding,
               ),
-              
             ],
           ),
         ),
@@ -54,9 +53,13 @@ class HomeBanner extends StatelessWidget {
               "<shanmukha/>",
               style: Responsive.isDesktop(context)
                   ? signatureFont.displaySmall!.copyWith(
-                  fontWeight: FontWeight.bold, color: titleTextColor, fontSize: 40.0)
+                      fontWeight: FontWeight.bold,
+                      color: titleTextColor,
+                      fontSize: 40.0)
                   : signatureFont.headlineSmall!.copyWith(
-                  fontWeight: FontWeight.bold, color: titleTextColor, fontSize: 22.0),
+                      fontWeight: FontWeight.bold,
+                      color: titleTextColor,
+                      fontSize: 22.0),
             ),
           ),
         )
@@ -77,17 +80,21 @@ class MyBuildAnimatedText extends StatelessWidget {
       maxLines: 1,
       child: Row(
         children: [
-          if (!Responsive.isMobileLarge(context)) const FlutterCodedText(),
-          if (!Responsive.isMobileLarge(context)) const SizedBox(
-              width: defaultPadding / 2,
-            ),
-        
-          Responsive.isMobile(context)? const Expanded(child: AnimatedBannerText()) : const AnimatedBannerText(),
-          if (!Responsive.isMobileLarge(context))
+          if (!Responsive.isMobileLarge(context)) ...[
+            const CodedText(text: "flutter"),
             const SizedBox(
               width: defaultPadding / 2,
             ),
-          if (!Responsive.isMobileLarge(context)) const FlutterCodedText(),
+          ],
+          Responsive.isMobile(context)
+              ? const Expanded(child: AnimatedBannerText())
+              : const AnimatedBannerText(),
+          if (!Responsive.isMobileLarge(context)) ...[
+            const SizedBox(
+              width: defaultPadding / 2,
+            ),
+            const CodedText(text: "react"),
+          ],
         ],
       ),
     );
@@ -102,34 +109,40 @@ class AnimatedBannerText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(
-        isRepeatingAnimation: true,
-        repeatForever: true,
-        animatedTexts: [
-      TyperAnimatedText(
-        "I build Cross-Platform Mobile apps",
-        speed: const Duration(milliseconds: 60),
-      ),
-    ]);
+      isRepeatingAnimation: true,
+      repeatForever: true,
+      animatedTexts: [
+        TyperAnimatedText(
+          "I Build Cross-Platform Mobile & Web Apps",
+          speed: const Duration(milliseconds: 60),
+        ),
+      ],
+    );
   }
 }
 
-class FlutterCodedText extends StatelessWidget {
-  const FlutterCodedText({
+class CodedText extends StatelessWidget {
+  final String text;
+  const CodedText({
     Key? key,
+    required this.text,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Text.rich(
-      TextSpan(text: "<", children: [
-        TextSpan(
-          text: "flutter",
-          style: TextStyle(
-            color: primaryColor,
+    return Text.rich(
+      TextSpan(
+        text: "<",
+        children: [
+          TextSpan(
+            text: text,
+            style: const TextStyle(
+              color: primaryColor,
+            ),
           ),
-        ),
-        TextSpan(text: ">"),
-      ]),
+          const TextSpan(text: ">"),
+        ],
+      ),
     );
   }
 }

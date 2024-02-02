@@ -22,7 +22,6 @@ class SideMenu extends StatefulWidget {
 class _SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
-    bool isHover = false;
     return Drawer(
       child: SafeArea(
         child: Column(

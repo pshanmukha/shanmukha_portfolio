@@ -6,6 +6,15 @@ class Certificate {
 
 List<Certificate> certificateList = [
   Certificate(
+    title: "Developing Front-End Apps with React",
+    description: "React is a JavaScript library for building user interfaces. "
+        "It's maintained by Facebook and a community of individual developers and companies. "
+        "Build dynamic websites and front-end applications quickly and easily with reusable React components",
+    verifyLink: "https://www.coursera.org/account/accomplishments/verify/NHD8MUKMBC2L",
+    image: "https://www.vectorlogo.zone/logos/coursera/coursera-icon.svg",
+    issuedBy: "Coursera",
+  ),
+  Certificate(
     title: "AWS Certified Cloud Practitioner",
     description: "The AWS Certified Cloud Practitioner offers a foundational understanding of AWS Cloud concepts, "
         "services, and terminology. This is a good starting point for individuals in non-technical roles with no prior IT or cloud experience "
@@ -36,7 +45,7 @@ List<Certificate> certificateList = [
         " It's used in everything from machine learning to building websites and software testing."
         " It can be used by developers and non-developers alike.",
     verifyLink: "https://www.coursera.org/account/accomplishments/certificate/6ZR7Z5B4AV42",
-    image: "https://seekvectorlogo.com/wp-content/uploads/2022/02/coursera-vector-logo-2022.png",
+    image: "https://www.vectorlogo.zone/logos/coursera/coursera-icon.svg",
     issuedBy: "Coursera",
   ),
   Certificate(
@@ -45,7 +54,7 @@ List<Certificate> certificateList = [
         "These structures are called List, Dictionary, Tuple and Set. "
         "Python allows its users to create their own Data Structures enabling them to have full control over their functionality.",
       verifyLink: "https://www.coursera.org/account/accomplishments/certificate/FFL3NZ55HF5S",
-      image: "https://seekvectorlogo.com/wp-content/uploads/2022/02/coursera-vector-logo-2022.png",
+      image: "https://www.vectorlogo.zone/logos/coursera/coursera-icon.svg",
       issuedBy: "Coursera",
     ),
   Certificate(
@@ -55,7 +64,7 @@ List<Certificate> certificateList = [
         "and delay when the page is rendered. To deliver optimal performance, make your JavaScript async "
         "and eliminate any unnecessary JavaScript from the critical rendering path.",
       verifyLink: "https://www.coursera.org/account/accomplishments/certificate/67WLHNUAECW5",
-      image: "https://seekvectorlogo.com/wp-content/uploads/2022/02/coursera-vector-logo-2022.png",
+      image: "https://www.vectorlogo.zone/logos/coursera/coursera-icon.svg",
       issuedBy: "Coursera",
     ),
 ];
