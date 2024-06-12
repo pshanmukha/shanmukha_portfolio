@@ -6,6 +6,13 @@ class Project {
 
 final List<Project> projectList = [
   Project(
+      name: "Nike",
+      description: "A minimalist Nike landing page built with modern web development tools. "
+          "It features a responsive design, modern UI elements, and fast performance. "
+          "The page showcases the latest Nike products and innovations.",
+      link: "https://pshanmukha.github.io/nike/"
+  ),
+  Project(
       name: "Henlo App (Zoom Clone)",
       description: "A Zoom Clone with build using Flutter SDK, Tech used : "
           "Firebase Auth, Firestore, Google Sign In, Jitsi Meet, "
