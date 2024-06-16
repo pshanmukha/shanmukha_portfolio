@@ -6,6 +6,13 @@ class Project {
 
 final List<Project> projectList = [
   Project(
+      name: "Search-location",
+      description: "This project is an interactive map application built with modern web development tools. " 
+    "It features a responsive design, dynamic zoom and location updates, and custom marker icons. "
+    "The application integrates with Nominatim for geocoding address searches.",
+      link: "https://pshanmukha.github.io/search-location/"
+  ),
+  Project(
       name: "Nike",
       description: "A minimalist Nike landing page built with modern web development tools. "
           "It features a responsive design, modern UI elements, and fast performance. "
