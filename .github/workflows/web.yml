@@ -9,7 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2 # Only works with v2
+      - uses: actions/checkout@v2
+      - name: Decode base64 secrests
+        run: echo $CONFIG_KEYS | base64 --decode > lin/.configkeys.dart
+        env:
+          CONFIG_KEYS: ${{ secrets.CONFIG_KEYS }}
       - uses: subosito/flutter-action@v1
       - uses: bluefireteam/flutter-gh-pages@v7
         with:

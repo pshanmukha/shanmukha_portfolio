@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shanmukha_portfolio/.configkeys.dart';
 import 'package:shanmukha_portfolio/constants.dart';
 import 'package:shanmukha_portfolio/utility/utility_methods.dart';
 
@@ -56,31 +57,35 @@ class _ContactFormState extends State<ContactForm> {
           children: [
             Text(
               "Contact Me",
-              style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                  fontWeight: FontWeight.bold, color: Colors.white),
+              style: Theme.of(context)
+                  .textTheme
+                  .displaySmall!
+                  .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
               child: Row(
                 children: [
-                  const Text("<", style: TextStyle(
-                      fontWeight: FontWeight.w500, color: primaryColor
-                  ),),
+                  const Text(
+                    "<",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500, color: primaryColor),
+                  ),
                   AnimatedTextKit(
                       isRepeatingAnimation: true,
                       repeatForever: true,
                       animatedTexts: [
-                        TyperAnimatedText(
-                          "Always happy to hear from you",
-                          speed: const Duration(milliseconds: 60),
-                          textStyle: const TextStyle(
-                              fontWeight: FontWeight.w500, color: Colors.white
-                          )
-                        ),
+                        TyperAnimatedText("Always happy to hear from you",
+                            speed: const Duration(milliseconds: 60),
+                            textStyle: const TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white)),
                       ]),
-                  const Text("/>", style: TextStyle(
-                      fontWeight: FontWeight.w500, color: primaryColor
-                  ),),
+                  const Text(
+                    "/>",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500, color: primaryColor),
+                  ),
                 ],
               ),
             ),
@@ -110,7 +115,8 @@ class _ContactFormState extends State<ContactForm> {
                 )
               ],
               validator: (value) {
-                if ((value != null && !value.isValidName) || (value != null && value.toString().length < 3)) {
+                if ((value != null && !value.isValidName) ||
+                    (value != null && value.toString().length < 3)) {
                   return "Enter valid name";
                 }
                 return null;
@@ -222,25 +228,41 @@ class _ContactFormState extends State<ContactForm> {
                       setState(() {
                         isLoading = true;
                       });
-                      await sendEmail(
-                              name: nameController.text,
-                              email: emailController.text,
-                              subject: subjectController.text,
-                              message: messageController.text,
-                              toEmail: "shanmukhapanyam10@gmail.com")
-                          .then((value) {
-                        const snackBar = SnackBar(
-                          content: Text('Mail Successfully Sent'),
+
+                      try {
+                        await sendEmailNew(
+                                name: nameController.text,
+                                email: emailController.text,
+                                subject: subjectController.text,
+                                message: messageController.text,
+                                toEmail: toEmail)
+                            .then((value) {
+                          const snackBar = SnackBar(
+                            content: Text('Mail Successfully Sent'),
+                            backgroundColor: primaryColor,
+                            elevation: 10,
+                            behavior: SnackBarBehavior.floating,
+                            margin: EdgeInsets.all(5),
+                          );
+                          setState(() {
+                            isLoading = false;
+                          });
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        });
+                      } on Exception catch (e) {
+                        final snackBar = SnackBar(
+                          content:
+                              Text('Mail Sending Failed - ${e.toString()}'),
                           backgroundColor: primaryColor,
                           elevation: 10,
                           behavior: SnackBarBehavior.floating,
-                          margin: EdgeInsets.all(5),
+                          margin: const EdgeInsets.all(5),
                         );
                         setState(() {
                           isLoading = false;
                         });
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                      });
+                      }
                     }
                   },
                   child: FittedBox(
@@ -261,7 +283,10 @@ class _ContactFormState extends State<ContactForm> {
                               SizedBox(
                                 width: defaultPadding / 2,
                               ),
-                              Icon(Icons.check_circle, color: submitButtonTextColor,),
+                              Icon(
+                                Icons.check_circle,
+                                color: submitButtonTextColor,
+                              ),
                             ],
                           ),
                   ),
@@ -286,8 +311,7 @@ extension ExtString on String {
   }
 
   bool get isValidName {
-    final nameRegExp =
-        RegExp(r"^[A-Za-z]+((\s)?((\'|\-|\.)?([A-Za-z])+))*$");
+    final nameRegExp = RegExp(r"^[A-Za-z]+((\s)?((\'|\-|\.)?([A-Za-z])+))*$");
     return nameRegExp.hasMatch(this);
   }
 
