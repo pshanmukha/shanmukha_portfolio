@@ -58,11 +58,6 @@ Future<EmailJSResponseStatus> sendEmailNew({
   required String toEmail,
 }) async {
   try {
-    print('toEmail - ${toEmail}');
-    print('publicKey - ${publicKey}');
-    print('privateKey - ${privateKey}');
-    print('serviceID - ${serviceID}');
-    print('templateID - ${templateID}');
     final res = await emailjs.send(
       serviceID,
       templateID,
@@ -81,14 +76,8 @@ Future<EmailJSResponseStatus> sendEmailNew({
             throttle: 10000,
           )),
     );
-    print('response! - ${res.toString()}');
     return res;
   } catch (error) {
-    if (error is emailjs.EmailJSResponseStatus) {
-      print('ERROR... $error');
-      throw Exception(error.toString());
-    }
-    print(error.toString());
     throw Exception(error.toString());
   }
 }
