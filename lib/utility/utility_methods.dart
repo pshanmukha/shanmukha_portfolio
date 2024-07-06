@@ -86,6 +86,7 @@ Future<EmailJSResponseStatus> sendEmailNew({
   } catch (error) {
     if (error is emailjs.EmailJSResponseStatus) {
       print('ERROR... $error');
+      rethrow;
     }
     print(error.toString());
     rethrow;
