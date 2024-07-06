@@ -55,6 +55,7 @@ Future<EmailJSResponseStatus> sendEmailNew({
   required String email,
   required String subject,
   required String message,
+  required String toEmail,
 }) async {
   try {
     print('toEmail - ${toEmail}');

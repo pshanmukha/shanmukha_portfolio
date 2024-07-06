@@ -231,11 +231,12 @@ class _ContactFormState extends State<ContactForm> {
 
                       try {
                         await sendEmailNew(
-                          name: nameController.text,
-                          email: emailController.text,
-                          subject: subjectController.text,
-                          message: messageController.text,
-                        ).then((value) {
+                                name: nameController.text,
+                                email: emailController.text,
+                                subject: subjectController.text,
+                                message: messageController.text,
+                                toEmail: "shanmukhapanyam10@gmail.com")
+                            .then((value) {
                           const snackBar = SnackBar(
                             content: Text('Mail Successfully Sent'),
                             backgroundColor: primaryColor,
@@ -252,7 +253,7 @@ class _ContactFormState extends State<ContactForm> {
                         final snackBar = SnackBar(
                           content:
                               Text('Mail Sending Failed - ${e.toString()}'),
-                          backgroundColor: primaryColor,
+                          backgroundColor: Colors.red,
                           elevation: 10,
                           behavior: SnackBarBehavior.floating,
                           margin: const EdgeInsets.all(5),
