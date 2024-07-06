@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Decode base64 secrests
-        run: echo $CONFIG_KEYS | base64 --decode > lin/.configkeys.dart
+        run: echo $CONFIG_KEYS | base64 --d > lib/.configkeys.dart
         env:
           CONFIG_KEYS: ${{ secrets.CONFIG_KEYS }}
       - uses: subosito/flutter-action@v1
