@@ -231,12 +231,11 @@ class _ContactFormState extends State<ContactForm> {
 
                       try {
                         await sendEmailNew(
-                                name: nameController.text,
-                                email: emailController.text,
-                                subject: subjectController.text,
-                                message: messageController.text,
-                                toEmail: toEmail)
-                            .then((value) {
+                          name: nameController.text,
+                          email: emailController.text,
+                          subject: subjectController.text,
+                          message: messageController.text,
+                        ).then((value) {
                           const snackBar = SnackBar(
                             content: Text('Mail Successfully Sent'),
                             backgroundColor: primaryColor,

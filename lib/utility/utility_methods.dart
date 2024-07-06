@@ -55,7 +55,6 @@ Future<EmailJSResponseStatus> sendEmailNew({
   required String email,
   required String subject,
   required String message,
-  required String toEmail,
 }) async {
   try {
     print('toEmail - ${toEmail}');
@@ -86,10 +85,10 @@ Future<EmailJSResponseStatus> sendEmailNew({
   } catch (error) {
     if (error is emailjs.EmailJSResponseStatus) {
       print('ERROR... $error');
-      rethrow;
+      throw Exception(error.toString());
     }
     print(error.toString());
-    rethrow;
+    throw Exception(error.toString());
   }
 }
 
