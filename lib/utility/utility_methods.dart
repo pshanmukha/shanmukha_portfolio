@@ -58,6 +58,11 @@ Future<EmailJSResponseStatus> sendEmailNew({
   required String toEmail,
 }) async {
   try {
+    print('toEmail - ${toEmail}');
+    print('publicKey - ${publicKey}');
+    print('privateKey - ${privateKey}');
+    print('serviceID - ${serviceID}');
+    print('templateID - ${templateID}');
     final res = await emailjs.send(
       serviceID,
       templateID,
