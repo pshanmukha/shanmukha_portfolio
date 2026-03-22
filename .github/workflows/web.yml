@@ -2,19 +2,41 @@ name: Gh-Pages
 
 on:
   push:
-    branches: [master]
+    branches: [ master ]
+
+permissions:
+  contents: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Decode base64 secrests
-        run: echo $CONFIG_KEYS | base64 --d > lib/.configkeys.dart
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Decode base64 secrets
+        run: echo "$CONFIG_KEYS" | base64 --decode > lib/.configkeys.dart
         env:
           CONFIG_KEYS: ${{ secrets.CONFIG_KEYS }}
-      - uses: subosito/flutter-action@v2
-      - uses: bluefireteam/flutter-gh-pages@v7
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
         with:
-          baseHref: /shanmukha_portfolio/
+          channel: stable
+          flutter-version: '3.29.0'   # use your local flutter version if possible
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build web
+        run: flutter build web --release --base-href /shanmukha_portfolio/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/web
