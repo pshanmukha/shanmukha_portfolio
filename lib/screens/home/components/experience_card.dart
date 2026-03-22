@@ -39,7 +39,7 @@ class _ExperienceCardState extends State<ExperienceCard> {
           child: Row(
             children: [
               SizedBox(
-                child:  Image.asset('assets/images/dimiour.jpg',height: 100,width: 100,),
+                child:  Image.asset(widget.recommendation.companyLogo ?? '',height: 100,width: 100,),
               ),
               const SizedBox(
                 width : defaultPadding,

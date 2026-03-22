@@ -11,6 +11,20 @@ class Certificate {
 
 List<Certificate> certificateList = [
   Certificate(
+    title: "Microsoft Certified: Azure Fundamentals",
+    description:
+    "Microsoft Certified: Azure Fundamentals offers a foundational understanding of "
+        "Microsoft Azure cloud concepts, services, pricing, governance, and core cloud principles. "
+        "This is a good starting point for individuals in non-technical roles with no prior IT "
+        "or cloud experience, or for those with on-premises IT experience looking to build basic "
+        "Microsoft Azure cloud fluency.",
+    verifyLink:
+    "https://learn.microsoft.com/api/credentials/share/en-us/PanyamShanmukhaG-8608/3C00E85E4C6610BB?sharingId=9161309BB58A2C29",
+    image:
+    "https://images.credly.com/size/340x340/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png",
+    issuedBy: "Microsoft",
+  ),
+  Certificate(
     title: "Developing Front-End Apps with React",
     description: "React is a JavaScript library for building user interfaces. "
         "It's maintained by Facebook and a community of individual developers and companies. "
@@ -30,27 +44,6 @@ List<Certificate> certificateList = [
         "https://www.credly.com/badges/835d3cfb-bc04-4308-971a-4b52183d821d?source=linked_in_profile",
     image:
         "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
-    issuedBy: "Amazon Web Services Training and Certification",
-  ),
-  Certificate(
-    title: "AWS Partner: Accreditation (Technical)",
-    description:
-        "Earners of this badge are AWS Partners who have developed fundamental, technical knowledge of AWS cloud computing, "
-        "global infrastructure, services, solutions, migration and security.",
-    verifyLink:
-        "https://www.credly.com/badges/d2f26a63-b149-40c6-a142-c001431adc71/public_url",
-    image:
-        "https://images.credly.com/images/a253b994-caa6-4dd1-bf0e-434dd012b1f6/image.png",
-    issuedBy: "Amazon Web Services Training and Certification",
-  ),
-  Certificate(
-    title: "AWS Partner: Cloud Economics Accreditation",
-    description:
-        "Earners of this badge are AWS Partners who have demonstrated knowledge of cost savings and data center economics in relation to cloud computing.",
-    verifyLink:
-        "https://www.credly.com/badges/5ba2bc28-b05c-44ee-ab65-1e3eedd0a707?source=linked_in_profile",
-    image:
-        "https://images.credly.com/images/9dc6345e-db80-44de-bb44-0c78775e53fa/image.png",
     issuedBy: "Amazon Web Services Training and Certification",
   ),
   Certificate(

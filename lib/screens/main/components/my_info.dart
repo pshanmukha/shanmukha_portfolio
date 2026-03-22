@@ -28,7 +28,7 @@ class MyInfo extends StatelessWidget {
               style: Theme.of(context).textTheme.titleSmall,
             ),
             const Text(
-              "Software Engineer",
+              "Senior Software Engineer",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
